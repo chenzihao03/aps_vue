@@ -219,7 +219,7 @@
         }, function (response) {
           that.$message.error({
             showClose: true,
-            message: !response.body.message ? '连接超时,请检查后台服务！' : response.body.message
+            message: !response.body.message ? '查询树出错,请检查后台服务！' : response.body.message
           });
         });
       },
