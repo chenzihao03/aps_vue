@@ -10,14 +10,15 @@ import 'babel-polyfill'//兼容IE浏览器
 import Fragment from 'vue-fragment'
 //引入elementUI
 import ElementUI from 'element-ui'
+import VueDraggableResizable from 'vue-draggable-resizable'
 import locale from 'element-ui/lib/locale/lang/zh-CN'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'vue-draggable-resizable/dist/VueDraggableResizable.css'
 //引入Font Awesome图标库
 import 'font-awesome/css/font-awesome.min.css'
 // 引入echarts
 import echarts from 'echarts'
 //引入axios
-
 
 //引入甘特图
 import gantt from 'dhtmlx-gantt'
@@ -32,6 +33,7 @@ Vue.use(gantt);
 Vue.use(echarts);
 Vue.use(Fragment.Plugin);
 Vue.use(ElementUI, {locale});
+Vue.component('vue-draggable-resizable', VueDraggableResizable);
 Vue.config.productionTip = false;
 new Vue({
   el: '#app',

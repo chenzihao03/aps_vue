@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img src="../../assets/img/404.jpg" class="bg">
+    <img src="../../../assets/img/404.jpg" class="bg">
     <form class="form">
       <button type="button" @click="goIndex">返回首页</button>
     </form>

@@ -121,7 +121,7 @@
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center center;
     -webkit-mask-size: 282px 292px;
-    -webkit-mask-image: url(../../assets/img/timg.png);
+    -webkit-mask-image: url(../../../assets/img/timg.png);
   }
 
   .timg.form-success {

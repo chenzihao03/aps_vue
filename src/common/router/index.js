@@ -14,7 +14,7 @@ export const constantRoutes = [{
   hidden: true,
 }, {
   path: '/error',
-  component: () => import('@/model/error/index'),
+  component: () => import('@/common/components/error/index'),
   hidden: true,
 }, {
   path: '/',
@@ -22,7 +22,7 @@ export const constantRoutes = [{
   hidden: true,
 }, {
   path: '/login',
-  component: () => import('@/model/login/index'),
+  component: () => import('@/common/components/login/index'),
   hidden: true,
 }, {
   path: '',
@@ -32,7 +32,7 @@ export const constantRoutes = [{
   children: [{
     path: 'home',
     name: '首页',
-    component: () => import('@/model/home/index'),
+    component: () => import('@/model/components/home/index'),
     meta: {title: '首页', icon: 'fa fa-home', requireAuth: true}
   }]
 }, {
@@ -117,28 +117,33 @@ export const constantRoutes = [{
   children: [{
     path: 'tree',
     name: '树',
-    component: () => import('@/model/tree/index'),
+    component: () => import('@/model/components/tree/index'),
     meta: {title: '树', icon: 'mdi-file-tree', requireAuth: true}
   }, {
     path: 'table',
     name: '表格',
-    component: () => import('@/model/table/index'),
+    component: () => import('@/model/components/table/index'),
     meta: {title: '表格', icon: 'mdi-file-table', requireAuth: true}
   }, {
     path: 'carousel',
     name: '跑马灯',
-    component: () => import('@/model/carousel/index'),
+    component: () => import('@/model/components/carousel/index'),
     meta: {title: '跑马灯', icon: 'mdi-view-carousel', requireAuth: true}
   }, {
     path: 'collapse',
     name: '折叠板',
-    component: () => import('@/model/collapse/index'),
+    component: () => import('@/model/components/collapse/index'),
     meta: {title: '折叠板', icon: 'mdi-format-align-bottom', requireAuth: true}
   }, {
     path: 'form',
     name: '表单',
-    component: () => import('@/model/form/index'),
+    component: () => import('@/model/components/form/index'),
     meta: {title: '表单', icon: 'mdi-book-minus', requireAuth: true}
+  }, {
+    path: 'draggerable',
+    name: '拖动',
+    component: () => import('@/model/components/draggerable/index'),
+    meta: {title: '拖动', icon: 'mdi-book-minus', requireAuth: true}
   }]
 }];
 
