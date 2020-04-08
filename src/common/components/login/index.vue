@@ -1,7 +1,7 @@
 <template>
   <el-container
-    v-loading="loading"
-    element-loading-background="rgba(255, 255, 255, 255)">
+    element-loading-text="页面加载中，请稍后"
+    v-loading.fullscreen.lock="loading">
     <div class="wrapper" :class="successClass">
       <div class="container">
         <div class="timg" :class="successClass">

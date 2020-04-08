@@ -39,7 +39,6 @@ export const constantRoutes = [{
   path: '/task',
   name: '作业管理',
   component: Layout,
-  redirect: '/task/apsSchedule',
   meta: {title: '作业管理', icon: 'fa fa-tasks'},
   children: [{
     path: 'apsSchedule',
@@ -56,7 +55,6 @@ export const constantRoutes = [{
   path: '/gantt',
   name: '甘特图',
   component: Layout,
-  redirect: '/gantt/orderGantt',
   meta: {title: '甘特图', icon: 'fa fa-area-chart'},
   children: [{
     path: 'orderGantt',
@@ -73,7 +71,6 @@ export const constantRoutes = [{
   path: '/reports',
   name: '查询报表',
   component: Layout,
-  redirect: '/reports/apsScheduleReport',
   meta: {title: '查询报表', icon: 'fa fa-search'},
   children: [{
     path: 'apsScheduleReport',
@@ -85,7 +82,6 @@ export const constantRoutes = [{
   path: '/apsSet',
   name: '排程设置',
   component: Layout,
-  redirect: '/apsSet/apsSetting',
   meta: {title: '排程设置', icon: 'fa fa-cogs'},
   children: [{
     path: 'apsSetting',
@@ -112,7 +108,6 @@ export const constantRoutes = [{
   path: '/components',
   name: '组件',
   component: Layout,
-  redirect: '/components/tree',
   meta: {title: '组件', icon: 'mdi-video-input-component'},
   children: [{
     path: 'tree',
@@ -149,8 +144,8 @@ export const constantRoutes = [{
 
 
 const createRouter = () => new Router({
-  mode: 'history',//去掉url的#
-  base: '/aps',
+  mode: 'hash',//去掉url的#
+  base: '/aps/',
   scrollBehavior: () => ({y: 0}),
   routes: constantRoutes
 });
