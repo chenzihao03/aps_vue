@@ -16,7 +16,7 @@
     "echarts": "^4.6.0",
     "element-ui": "^2.13.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "vue": "^2.5.2",
     "vue-draggable-resizable": "^2.1.0",
     "vue-fragment": "^1.5.1",
