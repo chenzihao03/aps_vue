@@ -4,7 +4,9 @@
        v-loading="loading"
        element-loading-text="拼命加载中"
        element-loading-background="rgba(255, 255, 255, 255)"
-  ></div>
+  >
+    <el-backtop target=".page-component__scroll .el-scrollbar__wrap"></el-backtop>
+  </div>
 </template>
 <script>
 
