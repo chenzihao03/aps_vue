@@ -5,7 +5,8 @@ Vue.use(Vuex);
 
 const state = {
   user: window.sessionStorage.getItem('user'),
-  token: window.sessionStorage.getItem('token')
+  token: window.sessionStorage.getItem('token'),
+  globalLoading: false
 };
 
 const mutations = {
@@ -13,6 +14,9 @@ const mutations = {
   SET_TOKEN: (state, data) => {
     state.token = data;
     window.sessionStorage.setItem('token', data);
+  },
+  SET_LOADING: (state, data) => {
+    state.globalLoading = data;
   },
   //获取用户名
   GET_USER: (state, data) => {

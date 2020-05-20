@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import store from '../store'
 import Router from 'vue-router'
+//加载条
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 // /* Layout */
 import Layout from '@/common/layout/index'
@@ -168,6 +171,7 @@ export function resetRouter() {
 // 注册全局钩子用来拦截导航
 router.beforeEach((to, from, next) => {
   const token = store.state.token;
+  NProgress.start();
   if (to.meta.requireAuth) { // 判断该路由是否需要登录权限
     if (token) { // 通过vuex state获取当前的token是否存在
       next()
@@ -179,6 +183,11 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
+});
+
+router.afterEach(() => {
+  NProgress.done();
+  store.commit('SET_LOADING', true);
 });
 
 //抛出这个这个实例对象方便外部读取以及访问

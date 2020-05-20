@@ -1,5 +1,11 @@
 <template>
   <div id="app" v-cloak>
+    <div id="loader-wrapper" v-if="!loading">
+      <div id="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+      <div class="load_title">正在加载系统资源，请耐心等待</div>
+    </div>
     <transition name="fade-transform" mode="out-in">
       <router-view/>
     </transition>
@@ -8,7 +14,14 @@
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    computed: {
+      loading: {
+        get() {
+          return this.$store.state.globalLoading;
+        }
+      }
+    }
   }
 </script>
 

@@ -1,7 +1,5 @@
 <template>
-  <el-container
-    element-loading-text="页面加载中，请稍后"
-    v-loading.fullscreen.lock="loading">
+  <el-container>
     <div class="wrapper" :class="successClass">
       <div class="container">
         <div class="timg" :class="successClass">
@@ -40,7 +38,6 @@
         successClass: "",
         nowDate: "",
         formShow: true,
-        loading: true,
         user: '',
         password: ''
       }
@@ -82,15 +79,11 @@
         var hours = new Date().getHours(),
           minutes = new Date().getMinutes() < 10 ? "0" + new Date().getMinutes() : new Date().getMinutes();
         that.nowDate = hours + ":" + minutes; // 修改数据date
-      }, 1000)
-      this.timer1 = setInterval(() => {
-        that.loading = false;
-      }, 2000)
+      }, 1000);
     },
     beforeDestroy() {
       if (this.timer) {
         clearInterval(this.timer); // 在Vue实例销毁前，清除我们的定时器
-        clearInterval(this.timer1); // 在Vue实例销毁前，清除我们的定时器
       }
     }
   }
